@@ -1,2 +1,32 @@
-# Automotive-AI-Sales-Assistant-Langflow
-An AI-powered RAG assistant built with Langflow and Astra DB Vector Store to provide real-time automotive inventory inquiries, OTR pricing, credit simulation, and vehicle specifications from official PDF catalogs.
+# 🚗 Automotive Sales & Inventory AI Assistant (Langflow + Astra DB)
+
+Sistem Asisten AI berbasis **RAG (Retrieval-Augmented Generation)** yang dirancang menggunakan **Langflow** dan **Astra DB Vector Store**. Sistem ini bertindak sebagai *Automotive Consultant* cerdas yang mampu memberikan informasi stok kendaraan, spesifikasi unit, harga OTR, hingga simulasi kredit secara *real-time* berdasarkan dokumen katalog resmi.
+
+---
+
+## 🌟 Fitur Utama
+- **Real-time Vector Search**: Membaca dan mencari data relevan dari dokumen PDF katalog resmi menggunakan Astra DB Vector Database.
+- **Automated Document Processing**: Memecah (*chunking*) dan mengubah teks katalog menjadi *embeddings* secara otomatis.
+- **Structured Financial & Spec Response**: Memberikan jawaban terstruktur mencakup spesifikasi unit, harga OTR, dan estimasi simulasi kredit (DP/tenor).
+- **Anti-Hallucination Guardrails**: Dilengkapi instruksi prompt ketat untuk memastikan AI hanya menjawab berdasarkan data katalog resmi.
+
+---
+
+## 📐 Arsitektur Sistem (Langflow Workflow)
+Sistem ini dibangun dengan dua alur (*flow*) utama:
+1. **Ingestion Pipeline**: `Read File (PDF)` ➔ `Text Splitter` ➔ `Gemini Embeddings` ➔ `Astra DB Ingestion`.
+2. **Retrieval & Generation Pipeline**: `Chat Input` ➔ `Astra DB Search Query` ➔ `Parser (Stringify)` ➔ `Prompt Template` ➔ `Gemini 1.5 Flash` ➔ `Chat Output`.
+
+![Langflow Architecture](path/to/your/langflow-canvas-screenshot.png)
+
+---
+
+## 📸 Demo & Hasil (Playground)
+![Playground Demo](path/to/your/playground-screenshot.png)
+
+---
+
+## 🚀 Cara Import Flow ke Langflow Anda
+1. Clone repositori ini:
+   ```bash
+   git clone [https://github.com/USERNAME_ANDA/Automotive-AI-Sales-Assistant-Langflow.git](https://github.com/USERNAME_ANDA/Automotive-AI-Sales-Assistant-Langflow.git)
