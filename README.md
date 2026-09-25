@@ -17,12 +17,16 @@ Sistem ini dibangun dengan dua alur (*flow*) utama:
 1. **Ingestion Pipeline**: `Read File (PDF)` ➔ `Text Splitter` ➔ `Gemini Embeddings` ➔ `Astra DB Ingestion`.
 2. **Retrieval & Generation Pipeline**: `Chat Input` ➔ `Astra DB Search Query` ➔ `Parser (Stringify)` ➔ `Prompt Template` ➔ `Gemini 1.5 Flash` ➔ `Chat Output`.
 
-![Langflow Architecture](path/to/your/langflow-canvas-screenshot.png)
+![Langflow Architecture]
+https://github.com/rizkytyofakhri9/Automotive-AI-Sales-Assistant-Langflow/blob/main/assets/Architecture.png)
 
 ---
 
 ## 📸 Demo & Hasil (Playground)
-![Playground Demo](path/to/your/playground-screenshot.png)
+![Playground Demo]
+(https://github.com/rizkytyofakhri9/Automotive-AI-Sales-Assistant-Langflow/blob/main/assets/playground1.png
+https://github.com/rizkytyofakhri9/Automotive-AI-Sales-Assistant-Langflow/blob/main/assets/playground2.png
+https://github.com/rizkytyofakhri9/Automotive-AI-Sales-Assistant-Langflow/blob/main/assets/playground3.png))
 
 ---
 
